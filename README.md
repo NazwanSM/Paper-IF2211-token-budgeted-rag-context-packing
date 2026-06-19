@@ -153,20 +153,6 @@ python experiments/run_experiments.py --dataset stratrag --results-dir results_s
 
 The StratRAG conversion maps each document in `doc_pool` into the project chunk schema. Documents listed in `gold_doc_indices` receive relevance `1.0`, while distractors receive a deterministic lexical-overlap relevance score against the query.
 
-## Run Tests
-
-```bash
-pytest -q
-```
-
-The tests cover:
-
-- DP correctness on a known knapsack instance,
-- token budget constraints for all selectors,
-- predictable greedy density behavior,
-- redundancy metric bounds,
-- evaluation row fields.
-
 ## Example Result Table
 
 With the imported StratRAG sample, the budget 1500 rows look like this:
